@@ -1,0 +1,13 @@
+[Unit]
+Description=Portal service (Deepin implementation)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+# In Treeland sessions the user manager exports DISPLAY and a compositor
+# specific WAYLAND_DISPLAY value. Force the standard wayland-0 socket to
+# match the working interactive launch path and avoid X11 fallback.
+ExecStart=/bin/sh -lc 'if [ -n "$WAYLAND_DISPLAY" ]; then unset DISPLAY XAUTHORITY; export QT_QPA_PLATFORM=wayland; export WAYLAND_DISPLAY=wayland-0; fi; exec @CMAKE_INSTALL_FULL_LIBEXECDIR@/xdg-desktop-portal-dde'
+Restart=on-failure
+RestartPreventExitStatus=1

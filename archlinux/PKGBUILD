@@ -1,12 +1,12 @@
-pkgname=xdg-desktop-portal-dde
+pkgname=xdg-desktop-portal-lingmo
 pkgver=1.0
 pkgrel=1.0
-sourcename=xdg-desktop-portal-dde
+sourcename=xdg-desktop-portal-lingmo
 sourcetars=("$sourcename"_"$pkgver".tar.gz)
 sourcedir="$sourcename"
 pkgdesc='xdg-desktop-portal backend for deepin'
 arch=('x86_64' 'aarch64')
-url='https://github.com/linuxdeepin/xdg-desktop-portal-dde'
+url='https://github.com/linuxdeepin/xdg-desktop-portal-lingmo'
 license=('LGPL3')
 depends=('qt6-base' 'qt6-wayland' 'wayland')
 makedepends=('git' 'ninja' 'cmake' 'qt6-tools' 'wlr-protocols')

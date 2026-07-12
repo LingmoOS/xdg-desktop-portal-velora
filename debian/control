@@ -1,4 +1,4 @@
-Source: xdg-desktop-portal-velora
+Source: xdg-desktop-portal-lingmo
 Section: libdevel
 Priority: optional
 Maintainer: Lingmo OS Team <team@lingmo.org>
@@ -26,15 +26,15 @@ Build-Depends:
   libdtk6declarative-dev,
   qt6-tools-dev,
 Standards-Version: 4.5.0
-Homepage: https://github.com/LingmoOS/xdg-desktop-portal-velora
+Homepage: https://github.com/LingmoOS/xdg-desktop-portal-lingmo
 
-Package: xdg-desktop-portal-dde
+Package: xdg-desktop-portal-lingmo
 Architecture: any
 Depends:
   ${shlibs:Depends},
   ${misc:Depends}
 Description: Dtk poortal backend for xdg-desktop-portal
-  xdg-desktop-portal-dde provide a DTK implementation for the
+  xdg-desktop-portal-lingmo provide a DTK implementation for the
   desktop-agnostic xdg-desktop-portal service. This allows sandboxed
   applications to request services from outside the sandbox using
   Dtk GUIs (app chooser, file chooser, print dialog) or using GNOME

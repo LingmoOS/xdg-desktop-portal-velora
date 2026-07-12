@@ -49,7 +49,7 @@ uint WallPaperPortal::set_V20_WallpaperURI(const QDBusObjectPath &handle,
     // options.value("set-on").toString(); // where to set the wallpaper. Possible values are 'background', 'lockscreen' or 'both'
 
     qCDebug(XdgDesktopDDEWallpaper) << "Start set wallpaper";
-    QDBusMessage primaryMsg = QDBusMessage::createMethodCall(QStringLiteral("org.deepin.dde.Display1"),
+    QDBusMessage primaryMsg = QDBusMessage::createMethodCall(QStringLiteral("org.lingmo.Display1"),
                                                              QStringLiteral("/org/deepin/dde/Display1"),
                                                              QStringLiteral("org.freedesktop.DBus.Properties"),
                                                              QStringLiteral("Get"));
@@ -60,7 +60,7 @@ uint WallPaperPortal::set_V20_WallpaperURI(const QDBusObjectPath &handle,
         return 1;
     }
 
-    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.deepin.dde.Appearance1"),
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.lingmo.Appearance1"),
                                                       QStringLiteral("/org/deepin/dde/Appearance1"),
                                                       QStringLiteral("org.deepin.dde.Appearance1"),
                                                       QStringLiteral("SetMonitorBackground"));
